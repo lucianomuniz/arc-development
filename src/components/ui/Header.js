@@ -107,7 +107,7 @@ const useStyles = makeStyles((theme) => ({
     color: 'white',
     opacity: 0.7,
   },
-  drawerEstimate: {
+  drawerItemEstimate: {
     backgroundColor: theme.palette.common.orange,
   },
   drawerItemSelected: {
@@ -320,7 +320,7 @@ const Header = (props) => {
             divider
             button
             component={Link}
-            className={classes.drawerEstimate}
+            className={classes.drawerItemEstimate}
             to='/estimate'
             selected={value === 5}
           >
