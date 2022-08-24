@@ -34,7 +34,7 @@ function App() {
             path='/contact'
             component={() => <div>Contact Us</div>}
           />
-          <Route exact path='/astimate' component={() => <div>Estimate</div>} />
+          <Route exact path='/estimate' component={() => <div>Estimate</div>} />
         </Switch>
       </BrowserRouter>
     </ThemeProvider>
