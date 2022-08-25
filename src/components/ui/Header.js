@@ -41,7 +41,7 @@ const useStyles = makeStyles((theme) => ({
       marginBottom: '2.1em',
     },
     [theme.breakpoints.down('xs')]: {
-      marginBottom: '1.8em',
+      marginBottom: '1.3em',
     },
   },
   logo: {
@@ -121,16 +121,15 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const Header = (props) => {
+  const { value, selectedIndex, setValue, setSelectedIndex } = props;
   const classes = useStyles();
   const theme = useTheme();
   // const iOS = process.browser && /iPad|iPhone|iPod/.test(navigator.userAgent);
   const matches = useMediaQuery(theme.breakpoints.down('md'));
 
   const [openDrawer, setOpenDrawer] = useState(false);
-  const [value, setValue] = useState(0);
   const [anchorEl, setAnchorEl] = useState(null);
   const [openMenu, setOpenMenu] = useState(false);
-  const [selectedIndex, setSelectedIndex] = useState(0);
 
   const handleChange = (e, newValue) => {
     setValue(newValue);
