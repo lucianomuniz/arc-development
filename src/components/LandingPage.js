@@ -10,6 +10,7 @@ import {
   CardContent,
 } from '@material-ui/core';
 
+import CallToAction from './ui/CallToAction';
 import ButtonArrow from '../components/ui/ButtonArrow';
 import animationData from '../animations/landinganimation/data';
 import customSoftware from '../assets/Custom Software Icon.svg';
@@ -413,6 +414,10 @@ export default function LandingPage() {
           </Grid>
           <div className={classes.infoBackground} />
         </Grid>
+      </Grid>
+      {/* Call to Action Block */}
+      <Grid item>
+        <CallToAction />
       </Grid>
     </Grid>
   );
