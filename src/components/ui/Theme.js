@@ -63,5 +63,10 @@ export default createMuiTheme({
       fontSize: '1.25rem',
       fontWeight: 300,
     },
+    subtitle2: {
+      color: 'white',
+      fontSize: '1.25rem',
+      fontWeight: 300,
+    },
   },
 });
