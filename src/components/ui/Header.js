@@ -1,22 +1,24 @@
 import React, { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import useScrollTrigger from '@material-ui/core/useScrollTrigger';
-import { makeStyles } from '@material-ui/styles';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import Button from '@material-ui/core/Button';
-import Menu from '@material-ui/core/Menu';
-import MenuItem from '@material-ui/core/MenuItem';
-import useMediaQuery from '@material-ui/core/useMediaQuery';
-import { useTheme } from '@material-ui/core/styles';
-import SwipeableDrawer from '@material-ui/core/SwipeableDrawer';
-import IconButton from '@material-ui/core/IconButton';
 import MenuIcon from '@material-ui/icons/Menu';
-import List from '@material-ui/core/List';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemText from '@material-ui/core/ListItemText';
+import { makeStyles } from '@material-ui/styles';
+import { useTheme } from '@material-ui/core/styles';
+import {
+  AppBar,
+  Button,
+  IconButton,
+  List,
+  ListItem,
+  ListItemText,
+  Menu,
+  MenuItem,
+  Tab,
+  Tabs,
+  Toolbar,
+  SwipeableDrawer,
+  useMediaQuery,
+  useScrollTrigger,
+} from '@material-ui/core';
 
 import logo from '../../assets/logo.svg';
 
@@ -34,14 +36,46 @@ function ElevationScroll(props) {
 }
 
 const useStyles = makeStyles((theme) => ({
-  toolbarMargin: {
-    ...theme.mixins.toolbar,
-    marginBottom: '3em',
-    [theme.breakpoints.down('md')]: {
-      marginBottom: '2.1em',
+  appbar: {
+    zIndex: theme.zIndex.modal + 1,
+  },
+  button: {
+    ...theme.typography.estimate,
+    borderRadius: '50px',
+    marginLeft: '50px',
+    marginRight: '50px',
+    height: '45px',
+    '&:hover': {
+      backgroundColor: theme.palette.secondary.light,
     },
+  },
+  drawer: {
+    backgroundColor: theme.palette.common.blue,
+  },
+  drawerIcon: {
+    height: '50px',
+    width: '50px',
     [theme.breakpoints.down('xs')]: {
-      marginBottom: '1.3em',
+      height: '40px',
+    },
+  },
+  drawerIconContainer: {
+    marginLeft: 'auto',
+    '&:hover': {
+      backgroundColor: 'transparent',
+    },
+  },
+  drawerItem: {
+    ...theme.typography.tab,
+    color: 'white',
+    opacity: 0.7,
+  },
+  drawerItemEstimate: {
+    backgroundColor: theme.palette.common.orange,
+  },
+  drawerItemSelected: {
+    '& .MuiListItemText-root': {
+      opacity: 1,
     },
   },
   logo: {
@@ -59,24 +93,6 @@ const useStyles = makeStyles((theme) => ({
       backgroundColor: 'transparent',
     },
   },
-  tabContainer: {
-    marginLeft: 'auto',
-  },
-  tab: {
-    ...theme.typography.tab,
-    minWidth: 10,
-    marginLeft: '25px',
-  },
-  button: {
-    ...theme.typography.estimate,
-    borderRadius: '50px',
-    marginLeft: '50px',
-    marginRight: '50px',
-    height: '45px',
-    '&:hover': {
-      backgroundColor: theme.palette.secondary.light,
-    },
-  },
   menu: {
     background: theme.palette.common.blue,
     color: 'white',
@@ -89,37 +105,23 @@ const useStyles = makeStyles((theme) => ({
       opacity: 1,
     },
   },
-  drawerIcon: {
-    height: '50px',
-    width: '50px',
-    [theme.breakpoints.down('xs')]: {
-      height: '40px',
-    },
-  },
-  drawerIconContainer: {
-    marginLeft: 'auto',
-    '&:hover': {
-      backgroundColor: 'transparent',
-    },
-  },
-  drawer: {
-    backgroundColor: theme.palette.common.blue,
-  },
-  drawerItem: {
+  tab: {
     ...theme.typography.tab,
-    color: 'white',
-    opacity: 0.7,
+    minWidth: 10,
+    marginLeft: '25px',
   },
-  drawerItemEstimate: {
-    backgroundColor: theme.palette.common.orange,
+  tabContainer: {
+    marginLeft: 'auto',
   },
-  drawerItemSelected: {
-    '& .MuiListItemText-root': {
-      opacity: 1,
+  toolbarMargin: {
+    ...theme.mixins.toolbar,
+    marginBottom: '3em',
+    [theme.breakpoints.down('md')]: {
+      marginBottom: '2.1em',
     },
-  },
-  appbar: {
-    zIndex: theme.zIndex.modal + 1,
+    [theme.breakpoints.down('xs')]: {
+      marginBottom: '1.3em',
+    },
   },
 }));
 
@@ -223,6 +225,9 @@ const Header = (props) => {
             }
           }
           break;
+        case '/estimate':
+          setValue(5);
+          break;
         default:
           break;
       }
@@ -250,7 +255,14 @@ const Header = (props) => {
           />
         ))}
       </Tabs>
-      <Button variant='contained' color='secondary' className={classes.button}>
+      <Button
+        component={Link}
+        to='/estimate'
+        variant='contained'
+        color='secondary'
+        className={classes.button}
+        onClick={() => setValue(5)}
+      >
         Free Estimate
       </Button>
       <Menu
