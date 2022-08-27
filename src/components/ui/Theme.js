@@ -18,11 +18,10 @@ export default createMuiTheme({
     },
   },
   typography: {
-    tab: {
-      fontFamily: 'Raleway',
-      fontSize: '1rem',
-      fontWeight: 700,
-      textTransform: 'none',
+    body1: {
+      color: arcGrey,
+      fontSize: '1.25rem',
+      fontWeight: 300,
     },
     estimate: {
       color: 'white',
@@ -67,6 +66,12 @@ export default createMuiTheme({
       color: 'white',
       fontSize: '1.25rem',
       fontWeight: 300,
+    },
+    tab: {
+      fontFamily: 'Raleway',
+      fontSize: '1rem',
+      fontWeight: 700,
+      textTransform: 'none',
     },
   },
 });
