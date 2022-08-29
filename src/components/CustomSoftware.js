@@ -4,8 +4,8 @@ import { Link } from 'react-router-dom';
 import { makeStyles, useTheme } from '@material-ui/core/styles';
 import {
   Grid,
-  IconButton,
   Hidden,
+  IconButton,
   Typography,
   useMediaQuery,
 } from '@material-ui/core';
@@ -92,7 +92,7 @@ function CustomSoftware(props) {
       <Grid
         item
         container
-        directin='row'
+        direction='row'
         justify={matchesMD ? 'center' : undefined}
         className={classes.rowContainer}
         style={{ marginTop: matchesXS ? '1em' : '2em' }}
