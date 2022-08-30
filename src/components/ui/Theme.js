@@ -23,6 +23,11 @@ export default createMuiTheme({
       fontSize: '1.25rem',
       fontWeight: 300,
     },
+    caption: {
+      fontSize: '1em',
+      fontWeight: 300,
+      color: arcGrey,
+    },
     estimate: {
       color: 'white',
       fontFamily: 'Pacifico',

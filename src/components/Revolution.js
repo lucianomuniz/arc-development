@@ -693,7 +693,13 @@ function Revolution() {
             </Typography>
           </Grid>
         </Grid>
-        <Grid item style={{ alignSelf: 'center' }} lg>
+        <Grid
+          item
+          container
+          justify='center'
+          style={{ alignSelf: 'center' }}
+          lg
+        >
           <img
             src={launch}
             alt='rocket'
