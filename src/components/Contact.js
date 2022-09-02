@@ -244,12 +244,7 @@ function Contact(props) {
                 </Typography>
               </Grid>
             </Grid>
-            <Grid
-              item
-              container
-              direction='column'
-              style={{ maxWidth: '20em' }}
-            >
+            <Grid item container direction='column' style={{ width: '20em' }}>
               <Grid item style={{ marginBottom: '0.5em' }}>
                 <TextField
                   label='Name'
@@ -282,7 +277,7 @@ function Contact(props) {
                 />
               </Grid>
             </Grid>
-            <Grid item style={{ maxWidth: '20em' }}>
+            <Grid item style={{ width: '20em' }}>
               <TextField
                 InputProps={{ disableUnderline: true }}
                 value={message}
@@ -334,7 +329,7 @@ function Contact(props) {
               ? '5em'
               : matchesMD
               ? '10em'
-              : '20em',
+              : '25em',
             paddingBottom: matchesXS ? '1em' : '5em',
             paddingLeft: matchesXS
               ? 0
@@ -342,7 +337,7 @@ function Contact(props) {
               ? '5em'
               : matchesMD
               ? '10em'
-              : '20em',
+              : '25em',
           },
         }}
       >
@@ -358,7 +353,7 @@ function Contact(props) {
               item
               container
               direction='column'
-              style={{ maxWidth: matchesXS ? '100%' : '20em' }}
+              style={{ width: matchesXS ? '100%' : '20em' }}
             >
               <Grid item style={{ marginBottom: '0.5em' }}>
                 <TextField
@@ -392,7 +387,7 @@ function Contact(props) {
                 />
               </Grid>
             </Grid>
-            <Grid item style={{ maxWidth: matchesXS ? '100%' : '20em' }}>
+            <Grid item style={{ width: matchesXS ? '100%' : '20em' }}>
               <TextField
                 InputProps={{ disableUnderline: true }}
                 value={message}
