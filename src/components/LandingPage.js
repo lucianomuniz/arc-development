@@ -14,7 +14,7 @@ import {
 import CallToAction from './ui/CallToAction';
 import ButtonArrow from '../components/ui/ButtonArrow';
 import animationData from '../animations/landinganimation/data';
-import customSoftware from '../assets/Custom Software Icon.svg';
+import customSoftware from '../assets/customSoftware.svg';
 import mobileAppsIcon from '../assets/mobileIcon.svg';
 import websiteIcon from '../assets/websiteIcon.svg';
 import revolutionBackground from '../assets/repeatingBackground.svg';

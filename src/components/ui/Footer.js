@@ -4,7 +4,7 @@ import { makeStyles } from '@material-ui/styles';
 import Grid from '@material-ui/core/Grid';
 import Hidden from '@material-ui/core/Hidden';
 
-import footerAdornment from '../../assets/Footer Adornment.svg';
+import footerAdornment from '../../assets/footerAdornment.svg';
 import facebook from '../../assets/facebook.svg';
 import twitter from '../../assets/twitter.svg';
 import instagram from '../../assets/instagram.svg';

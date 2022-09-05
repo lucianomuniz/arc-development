@@ -4,7 +4,7 @@ import { makeStyles, useTheme } from '@material-ui/styles';
 import { Grid, Button, Typography, useMediaQuery } from '@material-ui/core';
 
 import ButtonArrow from '../components/ui/ButtonArrow';
-import customSoftware from '../assets/Custom Software Icon.svg';
+import customSoftware from '../assets/customSoftware.svg';
 import mobileAppsIcon from '../assets/mobileIcon.svg';
 import websiteIcon from '../assets/websiteIcon.svg';
 
